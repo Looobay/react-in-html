@@ -9,26 +9,21 @@ function Button({ text, count, onClick }) {
 }
 
 function App() {
-    let is_red = false
-    function bg() {
-        if (is_red){
-            document.body.style.backgroundColor = 'white';
-            is_red = false
-        } else {
-            document.body.style.backgroundColor = 'red';
-            is_red = true
-        }
-    }
-
     function classic(){
         alert("Hello React!")
     }
 
     return (
-        <div>
-            <h1>Hello from React in your browser!</h1>
-            <Button text={'Classic React Button'} onClick={classic}></Button>
-            <Button text={'Click for RED'} onClick={bg}></Button>
+        <div className="App">
+            <header className="App-header">
+                <title>React in HTML</title>
+                <link rel="stylesheet" href="styles.css"/>
+                <img src="./img/react.png" className="App-logo"/>
+                <br/>
+                <a className="App-link" href="https://github.com/Looobay/react-in-html" target="_blank" rel="noopener noreferrer">Github Page</a>
+                <a className="App-link" href="https://react.dev/learn" target="_blank" rel="noopener noreferrer">Learn React</a>
+                <Button className="App-button" text={'Classic React Button'} onClick={classic}></Button>
+            </header>
         </div>
     );
 }

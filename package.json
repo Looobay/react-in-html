@@ -11,7 +11,7 @@
     "webpack-dev-server": "^5.1.0"
   },
   "scripts": {
-    "start": "npx webpack-dev-server --mode development --open",
-    "build": "npx babel src/app.jsx --out-file src/app.js"
+    "start": "webpack-dev-server --mode development --open",
+    "build": "babel src/app.jsx --out-file src/app.js"
   }
 }
