@@ -1,15 +1,29 @@
+const {
+  useState
+} = React;
 function Button({
   text,
-  count,
   onClick
 }) {
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("button", {
     onClick: onClick
-  }, text, " ", count));
+  }, text));
+}
+function FunButton() {
+  let [number, setNumber] = useState(0);
+  function FunClick() {
+    setNumber(number + 1);
+  }
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", null, number), /*#__PURE__*/React.createElement("button", {
+    onClick: FunClick
+  }, "Funny lol"));
 }
 function App() {
   function classic() {
     alert("Hello React!");
+  }
+  function counting() {
+    setCount(count + 1);
   }
   return /*#__PURE__*/React.createElement("div", {
     className: "App"
@@ -35,7 +49,7 @@ function App() {
     className: "App-button",
     text: 'Classic React Button',
     onClick: classic
-  })));
+  }), /*#__PURE__*/React.createElement(FunButton, null)));
 }
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(App());
