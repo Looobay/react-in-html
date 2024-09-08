@@ -1,16 +1,36 @@
-function Button({ text }){
+function AlertButton({ text }){
+    function handleClick(){
+        alert("Hello!")
+    }
+
     return(
-        <button>
+        <button onClick={handleClick}>
             {text}
         </button>
     )
 }
 
+let num = 0
+function AddButton(){
+    function addOneClick(){
+        num+=1
+    }
+
+    return(
+        <button onClick={addOneClick}>
+            Click to add!
+        </button>
+    )
+}
+
+
 function App(){
     return(
         <div>
             <h1>Hello from React in your browser!</h1>
-            <Button test="Hello React!"/>
+            <h2>{num}</h2>
+            <AddButton/>
+            <AlertButton text="React alert"/>
         </div>
     )
 }
