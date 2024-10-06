@@ -17,6 +17,10 @@ function FunButton(){
         setNumber(number + 1)
     }
 
+    function UnfunClick(){
+        setNumber(number - 1)
+    }
+
     return(
         <div>
             <p>
@@ -24,6 +28,9 @@ function FunButton(){
             </p>
             <button onClick={FunClick}>
                 Funny lol
+            </button>
+            <button onClick={UnfunClick}>
+                Not funny
             </button>
         </div>
     )

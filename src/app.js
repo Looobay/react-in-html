@@ -14,9 +14,14 @@ function FunButton() {
   function FunClick() {
     setNumber(number + 1);
   }
+  function UnfunClick() {
+    setNumber(number - 1);
+  }
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", null, number), /*#__PURE__*/React.createElement("button", {
     onClick: FunClick
-  }, "Funny lol"));
+  }, "Funny lol"), /*#__PURE__*/React.createElement("button", {
+    onClick: UnfunClick
+  }, "Not funny"));
 }
 function App() {
   function classic() {
